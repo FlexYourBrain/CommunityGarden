@@ -100,15 +100,15 @@ body {
 }
 
 .container.logo-container {
-  position: static;
+  position: relative;
   display: grid;
   -ms-flex-pack: start;
   clear: none;
   -ms-flex-align: center;
   margin: auto;
   padding-right: 0;
-  padding-left: 20%;
-  min-height: 1000px;
+  padding-left: 0;
+  min-height: 100vh;
   height: 100%;
   background-color: transparent;
 
@@ -133,9 +133,9 @@ body {
 }
 
 .container.text-container {
-  position: static;
+  position: relative;
   right: auto;
-  left: 5vmax;
+  left: 5vh;
   display: block;
   margin-top: 0;
   padding-left: 0;
@@ -154,7 +154,8 @@ div.responsive-picture.logo {
 
 a.social-image.social-icon-1 {
   position: relative;
-  right: 0;
+  right: auto;
+  left: 5vh;
   display: block;
   float: none;
   margin: 2rem auto 4rem;
@@ -166,6 +167,7 @@ a.social-image.social-icon-1 {
   vertical-align: top;
 
   grid-area: auto;
+  justify-self: center;
 }
 
 @media screen and (min-width: 27.4375rem) {
@@ -188,6 +190,12 @@ a.social-image.social-icon-1 {
     border-bottom-left-radius: 22px;
     background-color: rgba(31, 59, 98, .9);
     color: #b9d2e8;
+  }
+
+  /* Layout Elements */
+
+  .container.text-container {
+    left: 5vh;
   }
 
   a.social-image.social-icon-1 {
@@ -401,8 +409,8 @@ a.social-image.social-icon-1 {
     position: relative;
     top: auto;
     right: auto;
-    bottom: -300%;
-    left: 145%;
+    bottom: -10vh;
+    left: 70%;
     display: inline-block;
     float: right;
     clear: both;
@@ -452,10 +460,22 @@ a.social-image.social-icon-1 {
   /* Layout Elements */
 
   .container.text-container {
-    left: 25%;
-    margin-top: 275px;
+    position: relative;
+    left: 50%;
+    margin-top: 200px;
     padding-top: 0;
     width: 100%;
+    vertical-align: middle;
+  }
+
+  .container.logo-container {
+    position: relative;
+    right: auto;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    padding-left: 0;
+    min-width: 100%;
+    min-height: 100vh;
   }
 
   div.responsive-picture.logo {
@@ -465,9 +485,10 @@ a.social-image.social-icon-1 {
   }
 
   a.social-image.social-icon-1 {
-    left: 10%;
+    right: auto;
+    left: 50%;
     float: none;
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-bottom: 0;
     min-width: 3rem;
     max-width: 3rem;
